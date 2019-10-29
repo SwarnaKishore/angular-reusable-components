@@ -1,32 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 declare var $: any;
 
 @Component({
-  selector: 'bootstrap-modal',
+  selector: 'app-bootstrap-modal',
   templateUrl: './bootstrap-modal.component.html',
   styleUrls: ['./bootstrap-modal.component.scss']
 })
 export class BootstrapModalComponent implements OnInit {
 
+  @Input() modalId: string;
+  @Input() title: string;
+
   constructor() { }
 
   ngOnInit() {
+    if (!this.modalId) {
+      this.modalId = 'sampleModal';
+    }
+
+    if (!this.title) {
+      this.title = 'Modal Title';
+    }
   }
 
   public showInfoModal(): void {
-    $('#exampleModalCenter').modal('show');
+    $('#' + this.modalId).modal('show');
   }
 
   public hideModal(): void {
-      $('#exampleModalCenter').modal('hide');
+      $('#' + this.modalId).modal('hide');
   }
 
   public autoFocus(): void {
-     $(document).ready(function () {
-         $('#exampleModalCenter').on('shown.bs.modal', function () {
-             console.log('autofocus');
-             $('#modalOkButton').trigger('focus');
+     $(document).ready(() => {
+         $('#' + this.modalId).on('shown.bs.modal', () => {
+             $('#modalButton').trigger('focus');
          });
      });
   }
