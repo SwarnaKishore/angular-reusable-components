@@ -1,4 +1,10 @@
 <app-bootstrap-modal [title]="'Modal Title'"
-                     [modalId]="'sampleModalId'"></app-bootstrap-modal>
-                     
+                     [modalId]="'sampleModalId'"
+                     [triggerModal]="true"
+                     [primaryButtonName]="'Ok'">
+                     <p>Test</p>
+
+                    </app-bootstrap-modal>
+
+                    <app-loader></app-loader>
 <router-outlet></router-outlet>

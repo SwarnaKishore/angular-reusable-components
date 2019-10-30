@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 
 declare var $: any;
 
@@ -7,14 +7,22 @@ declare var $: any;
   templateUrl: './bootstrap-modal.component.html',
   styleUrls: ['./bootstrap-modal.component.scss']
 })
-export class BootstrapModalComponent implements OnInit {
+export class BootstrapModalComponent implements OnInit, OnChanges {
 
   @Input() modalId: string;
   @Input() title: string;
+  @Input() triggerModal: boolean;
+  @Input() primaryButtonName: string;
+  @Input() secondaryButtonName: string;
+  @Input() autoFocusPrimaryBtn: boolean;
+  @Input() autoFocusSecondaryBtn: boolean;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
     if (!this.modalId) {
       this.modalId = 'sampleModal';
     }
@@ -22,20 +30,40 @@ export class BootstrapModalComponent implements OnInit {
     if (!this.title) {
       this.title = 'Modal Title';
     }
+
+    if (this.autoFocusPrimaryBtn && this.primaryButtonName) {
+      this.autoFocus('primary-button');
+    }
+
+    if (this.autoFocusSecondaryBtn && this.secondaryButtonName) {
+      this.autoFocus('secondary-button');
+    }
+
+  //   if (changes.triggerModal) {
+  //     $(document).ready(function(modalId) {
+  //       if (changes.triggerModal.currentValue) {
+  //         $('#' + modalId).modal('show');
+  //       } else if (changes.triggerModal.previousValue && changes.triggerModal.currentValue === false) {
+  //         $('#' + modalId).modal('hide');
+  //       }
+  //     } (this.modalId));
+  //   }
+  // }
   }
 
-  public showInfoModal(): void {
-    $('#' + this.modalId).modal('show');
+  public showModal(modalId: string = null): void {
+    modalId = modalId ? modalId : 'sampleModal';
+    $('#' + modalId).modal('show');
   }
 
-  public hideModal(): void {
-      $('#' + this.modalId).modal('hide');
-  }
+  // public hideModal(modalId: string): void {
+  //     $('#' + modalId).modal('hide');
+  // }
 
-  public autoFocus(): void {
+  public autoFocus(elementId: string): void {
      $(document).ready(() => {
          $('#' + this.modalId).on('shown.bs.modal', () => {
-             $('#modalButton').trigger('focus');
+             $('#' + elementId).trigger('focus');
          });
      });
   }
