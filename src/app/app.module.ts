@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.component';
 import { LoaderModule } from './loader/loader.module';
+import { ButtonModule } from './button/button.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoaderModule } from './loader/loader.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoaderModule
+    LoaderModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
