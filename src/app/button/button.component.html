@@ -1,3 +1,7 @@
-<button class="btn {{classType}}">
+<button id="{{id}}" class="btn {{classType}}"  
+        [attr.disabled]="disabled ? 'disabled' : null"
+        [style.background-color]="backgroundColor ? backgroundColor : null"
+        [style.color]="color ? color : null"
+        [style.border-radius]="radius ? radius : null">
         <ng-content></ng-content>
 </button>
