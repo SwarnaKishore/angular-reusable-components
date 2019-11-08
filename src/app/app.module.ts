@@ -7,12 +7,16 @@ import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.compo
 import { LoaderModule } from './modules/loader/loader.module';
 import { ButtonModule } from './modules/button/button.module';
 import { ButtonsViewComponent } from './components/buttons-view/buttons-view.component';
+import { AlertsViewComponent } from './alerts-view/alerts-view.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BootstrapModalComponent,
     ButtonsViewComponent,
+    AlertsViewComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
