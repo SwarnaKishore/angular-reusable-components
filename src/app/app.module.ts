@@ -7,8 +7,9 @@ import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.compo
 import { LoaderModule } from './modules/loader/loader.module';
 import { ButtonModule } from './modules/button/button.module';
 import { ButtonsViewComponent } from './components/buttons-view/buttons-view.component';
-import { AlertsViewComponent } from './alerts-view/alerts-view.component';
-import { AlertComponent } from './alert/alert.component';
+import { AlertModule } from './modules/alert/alert.module';
+import { AlertsViewComponent } from './components/alerts-view/alerts-view.component';
+import { AlertComponent } from './modules/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AlertComponent } from './alert/alert.component';
     BrowserModule,
     AppRoutingModule,
     LoaderModule,
-    ButtonModule
+    ButtonModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
