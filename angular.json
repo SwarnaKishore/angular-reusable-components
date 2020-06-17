@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-components": {
+    "angular-reusable-components": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-components",
+            "outputPath": "dist/angular-reusable-components",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -31,8 +31,10 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.min.js",
-                        "node_modules/bootstrap/dist/js/bootstrap.js"]
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -47,7 +49,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -69,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-components:build"
+            "browserTarget": "angular-reusable-components:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-components:build:production"
+              "browserTarget": "angular-reusable-components:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-components:build"
+            "browserTarget": "angular-reusable-components:build"
           }
         },
         "test": {
@@ -117,15 +118,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-components:serve"
+            "devServerTarget": "angular-reusable-components:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-components:serve:production"
+              "devServerTarget": "angular-reusable-components:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "angular-components"
+    }
+  },
+  "defaultProject": "angular-reusable-components"
 }
