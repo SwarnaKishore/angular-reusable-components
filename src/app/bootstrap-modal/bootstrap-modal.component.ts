@@ -51,9 +51,11 @@ export class BootstrapModalComponent implements OnInit, OnChanges {
   // }
   }
 
-  public showModal(modalId: string = null): void {
-    modalId = modalId ? modalId : 'sampleModal';
-    $('#' + modalId).modal('show');
+  public showModal(): void {
+    const modalId = this.modalId;
+    $(document).ready(() => {
+      $('#' + modalId).modal('show');
+  });
   }
 
   // public hideModal(modalId: string): void {
