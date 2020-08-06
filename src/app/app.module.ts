@@ -9,6 +9,7 @@ import { ButtonModule } from './modules/button/button.module';
 import { AlertModule } from './modules/alert/alert.module';
 import { ButtonsViewComponent } from './components-demo/buttons-view/buttons-view.component';
 import { AlertsViewComponent } from './components-demo/alerts-view/alerts-view.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AlertsViewComponent } from './components-demo/alerts-view/alerts-view.c
     BootstrapModalComponent,
     ButtonsViewComponent,
     AlertsViewComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
