@@ -29,11 +29,13 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/sass/materialize.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "src/assets/scripts/materialize.min.js"
             ]
           },
           "configurations": {

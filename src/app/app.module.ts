@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { BootstrapModalComponent } from './bootstrap-modal/bootstrap-modal.component';
 import { LoaderModule } from './modules/loader/loader.module';
 import { ButtonModule } from './modules/button/button.module';
-import { ButtonsViewComponent } from './components/buttons-view/buttons-view.component';
 import { AlertModule } from './modules/alert/alert.module';
-import { AlertsViewComponent } from './components/alerts-view/alerts-view.component';
+import { HomeComponent } from './home/home.component';
+import { ComponentsViewComponent } from './components-view/components-view.component';
+import { ButtonsViewComponent } from './components-view/components-usage/buttons-view/buttons-view.component';
+import { AlertsViewComponent } from './components-view/components-usage/alerts-view/alerts-view.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { AlertsViewComponent } from './components/alerts-view/alerts-view.compon
     BootstrapModalComponent,
     ButtonsViewComponent,
     AlertsViewComponent,
+    HomeComponent,
+    ComponentsViewComponent,
   ],
   imports: [
     BrowserModule,
