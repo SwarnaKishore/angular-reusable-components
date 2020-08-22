@@ -1,27 +1,27 @@
 <div>
         <div>Buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-primary'">Primary</app-button>
-                <app-button [classType]="'btn-default'">Default</app-button>
-                <app-button [classType]="'btn-info'">Info</app-button>
-                <app-button [classType]="'btn-success'">Success</app-button>
-                <app-button [classType]="'btn-warning'">Warning</app-button>
-                <app-button [classType]="'btn-danger'">Danger</app-button>
+                <app-button [class]="'btn waves-effect waves-light'">Primary</app-button>
+                <app-button [class]="'btn btn-default'">Default</app-button>
+                <app-button [class]="'btn btn-info'">Info</app-button>
+                <app-button [class]="'btn btn-success'">Success</app-button>
+                <app-button [class]="'btn btn-warning'">Warning</app-button>
+                <app-button [class]="'btn btn-danger'">Danger</app-button>
         </div>
 
         <div>Outline buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-outline-primary'">Primary</app-button>
-                <app-button [classType]="'btn btn-outline-info'">Info</app-button>
-                <app-button [classType]="'btn-outline-secondary'">Secondary</app-button>
-                <app-button [classType]="'btn-outline-success'">Success</app-button>
-                <app-button [classType]="'btn btn-outline-danger'">Danger</app-button>
+                <app-button [class]="'btn btn-outline-primary'">Primary</app-button>
+                <app-button [class]="'btn btn-outline-info'">Info</app-button>
+                <app-button [class]="'btn  btn-outline-secondary'">Secondary</app-button>
+                <app-button [class]="'btn btn-outline-success'">Success</app-button>
+                <app-button [class]="'btn btn btn-outline-danger'">Danger</app-button>
         </div>
 
         <div>Custom colored buttons</div>
         <div class="buttons">
-                <app-button [backgroundColor]="'pink'">Pink</app-button>
-                <app-button [backgroundColor]="'#000'" [color]="'#fff'">Black</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'pink'">Pink</app-button>
+                <app-button class]="'btn'" [backgroundColor]="'#000'" [color]="'#fff'">Black</app-button>
         </div>
 
         <div>Rounded buttons</div>
@@ -38,19 +38,21 @@
 
         <div>Large buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-primary btn-lg'">Primary</app-button>
-                <app-button [classType]="'btn btn-success btn-lg'">Success</app-button>
+                <app-button [class]="'waves-effect waves-light btn-large'">Primary</app-button>
+                <app-button [class]="'waves-effect waves-light btn-large'">Success</app-button>
         </div>
                             
         <div>Small buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-primary btn-sm'">Primary</app-button>
-                <app-button [classType]="'btn btn-success btn-sm'">Success</app-button>
+                <app-button [class]="'waves-effect waves-light btn-small'">Button</app-button>
+                <app-button [class]="'waves-effect waves-light btn-small'">Button</app-button>
         </div>
 
         <div>Disabled buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-secondary'" [disabled]="true">Secondary</app-button>
-                <app-button [classType]="'btn-default'" [disabled]="true">Default</app-button>
+                <app-button [class]="'btn-large disabled'" [disabled]="true">Button</app-button>
+                <app-button [class]="'btn disabled'" [disabled]="true">Button</app-button>
+                <app-button [class]="'btn-flat disabled'" [disabled]="true">Button</app-button>
+                <app-button [class]="'btn-floating disabled'" [disabled]="true"><i class="material-icons">add</i></app-button>
         </div>
 </div>
