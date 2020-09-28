@@ -1,56 +1,60 @@
 <div>
         <div>Buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-primary'">Primary</app-button>
-                <app-button [classType]="'btn-default'">Default</app-button>
-                <app-button [classType]="'btn-info'">Info</app-button>
-                <app-button [classType]="'btn-success'">Success</app-button>
-                <app-button [classType]="'btn-warning'">Warning</app-button>
-                <app-button [classType]="'btn-danger'">Danger</app-button>
+                <app-button [class]="'btn btn-primary'">Primary</app-button>
+                <app-button [class]="'btn btn-secondary'">Secondary</app-button>
+                <app-button [class]="'btn btn-info'">Info</app-button>
+                <app-button [class]="'btn btn-success'">Success</app-button>
+                <app-button [class]="'btn btn-warning'">Warning</app-button>
+                <app-button [class]="'btn btn-danger'">Danger</app-button>
         </div>
 
         <div>Outline buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-outline-primary'">Primary</app-button>
-                <app-button [classType]="'btn btn-outline-info'">Info</app-button>
-                <app-button [classType]="'btn-outline-secondary'">Secondary</app-button>
-                <app-button [classType]="'btn-outline-success'">Success</app-button>
-                <app-button [classType]="'btn btn-outline-danger'">Danger</app-button>
+                <app-button [class]="'btn btn-outline-primary'">Primary</app-button>
+                <app-button [class]="'btn btn-outline-info'">Info</app-button>
+                <app-button [class]="'btn btn-outline-secondary'">Secondary</app-button>
+                <app-button [class]="'btn btn-outline-success'">Success</app-button>
+                <app-button [class]="'btn btn btn-outline-danger'">Danger</app-button>
         </div>
 
         <div>Custom colored buttons</div>
         <div class="buttons">
-                <app-button [backgroundColor]="'pink'">Pink</app-button>
-                <app-button [backgroundColor]="'#000'" [color]="'#fff'">Black</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'pink'">Pink</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#000'" [color]="'#fff'">Black</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#9ccc65'" [color]="'#fff'">Green</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'grey'" [color]="'#fff'">Grey</app-button>
         </div>
 
-        <div>Rounded buttons</div>
+        <div>Rounded buttons with custom colors</div>
         <div class="buttons">
-                <app-button  [backgroundColor]="'#845EC2'" [color]="'#fff'" [radius]="'5px'">Purple</app-button>
-                <app-button  [backgroundColor]="'#FF6F91'" [color]="'#fff'" [radius]="'50px'">Pink</app-button>
+                <app-button [class]="'btn'"  [backgroundColor]="'#845EC2'" [color]="'#fff'" [radius]="'5px'">Purple</app-button>
+                <app-button  [class]="'btn'" [backgroundColor]="'#FF6F91'" [color]="'#fff'" [radius]="'50px'">Pink</app-button>
         </div>
         
         <div>Buttons with icons</div>
         <div class="buttons">
-                <app-button [backgroundColor]="'#458b74'" [color]="'#fff'"><i class="material-icons">done_outline</i>Aquamarine</app-button>
-                <app-button [backgroundColor]="'#ff7256'" [color]="'#fff'">Coral<i class="material-icons">favorite</i></app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#458b74'" [color]="'#fff'"><i class="material-icons">done_outline</i>Aquamarine</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#ff7256'" [color]="'#fff'">Coral<i class="material-icons">favorite</i></app-button>
         </div>
 
         <div>Large buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-primary btn-lg'">Primary</app-button>
-                <app-button [classType]="'btn btn-success btn-lg'">Success</app-button>
+                <app-button [class]="'waves-effect waves-light btn-large'">Large</app-button>
+                <app-button [class]="'waves-effect waves-light btn-large orange darken-2'">Large</app-button>
         </div>
                             
         <div>Small buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-primary btn-sm'">Primary</app-button>
-                <app-button [classType]="'btn btn-success btn-sm'">Success</app-button>
+                <app-button [class]="'waves-effect waves-light btn-small'">Small</app-button>
+                <app-button [class]="'waves-effect waves-light btn-small cyan lighten-1'">Button</app-button>
         </div>
 
         <div>Disabled buttons</div>
         <div class="buttons">
-                <app-button [classType]="'btn-secondary'" [disabled]="true">Secondary</app-button>
-                <app-button [classType]="'btn-default'" [disabled]="true">Default</app-button>
+                <app-button [class]="'btn-large disabled'" [disabled]="true">Button</app-button>
+                <app-button [class]="'btn disabled'" [disabled]="true">Button</app-button>
+                <app-button [class]="'btn-flat disabled'" [disabled]="true">Button</app-button>
+                <app-button [class]="'btn-floating disabled'" [disabled]="true"><i class="material-icons">add</i></app-button>
         </div>
 </div>
