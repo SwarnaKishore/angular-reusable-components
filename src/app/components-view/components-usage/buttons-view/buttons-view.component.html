@@ -1,8 +1,8 @@
 <div>
         <div>Buttons</div>
         <div class="buttons">
-                <app-button [class]="'btn waves-effect waves-light'">Primary</app-button>
-                <app-button [class]="'btn btn-default'">Default</app-button>
+                <app-button [class]="'btn btn-primary'">Primary</app-button>
+                <app-button [class]="'btn btn-secondary'">Secondary</app-button>
                 <app-button [class]="'btn btn-info'">Info</app-button>
                 <app-button [class]="'btn btn-success'">Success</app-button>
                 <app-button [class]="'btn btn-warning'">Warning</app-button>
@@ -13,7 +13,7 @@
         <div class="buttons">
                 <app-button [class]="'btn btn-outline-primary'">Primary</app-button>
                 <app-button [class]="'btn btn-outline-info'">Info</app-button>
-                <app-button [class]="'btn  btn-outline-secondary'">Secondary</app-button>
+                <app-button [class]="'btn btn-outline-secondary'">Secondary</app-button>
                 <app-button [class]="'btn btn-outline-success'">Success</app-button>
                 <app-button [class]="'btn btn btn-outline-danger'">Danger</app-button>
         </div>
@@ -21,31 +21,33 @@
         <div>Custom colored buttons</div>
         <div class="buttons">
                 <app-button [class]="'btn'" [backgroundColor]="'pink'">Pink</app-button>
-                <app-button class]="'btn'" [backgroundColor]="'#000'" [color]="'#fff'">Black</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#000'" [color]="'#fff'">Black</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#9ccc65'" [color]="'#fff'">Green</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'grey'" [color]="'#fff'">Grey</app-button>
         </div>
 
-        <div>Rounded buttons</div>
+        <div>Rounded buttons with custom colors</div>
         <div class="buttons">
-                <app-button  [backgroundColor]="'#845EC2'" [color]="'#fff'" [radius]="'5px'">Purple</app-button>
-                <app-button  [backgroundColor]="'#FF6F91'" [color]="'#fff'" [radius]="'50px'">Pink</app-button>
+                <app-button [class]="'btn'"  [backgroundColor]="'#845EC2'" [color]="'#fff'" [radius]="'5px'">Purple</app-button>
+                <app-button  [class]="'btn'" [backgroundColor]="'#FF6F91'" [color]="'#fff'" [radius]="'50px'">Pink</app-button>
         </div>
         
         <div>Buttons with icons</div>
         <div class="buttons">
-                <app-button [backgroundColor]="'#458b74'" [color]="'#fff'"><i class="material-icons">done_outline</i>Aquamarine</app-button>
-                <app-button [backgroundColor]="'#ff7256'" [color]="'#fff'">Coral<i class="material-icons">favorite</i></app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#458b74'" [color]="'#fff'"><i class="material-icons">done_outline</i>Aquamarine</app-button>
+                <app-button [class]="'btn'" [backgroundColor]="'#ff7256'" [color]="'#fff'">Coral<i class="material-icons">favorite</i></app-button>
         </div>
 
         <div>Large buttons</div>
         <div class="buttons">
-                <app-button [class]="'waves-effect waves-light btn-large'">Primary</app-button>
-                <app-button [class]="'waves-effect waves-light btn-large'">Success</app-button>
+                <app-button [class]="'waves-effect waves-light btn-large'">Large</app-button>
+                <app-button [class]="'waves-effect waves-light btn-large orange darken-2'">Large</app-button>
         </div>
                             
         <div>Small buttons</div>
         <div class="buttons">
-                <app-button [class]="'waves-effect waves-light btn-small'">Button</app-button>
-                <app-button [class]="'waves-effect waves-light btn-small'">Button</app-button>
+                <app-button [class]="'waves-effect waves-light btn-small'">Small</app-button>
+                <app-button [class]="'waves-effect waves-light btn-small cyan lighten-1'">Button</app-button>
         </div>
 
         <div>Disabled buttons</div>
